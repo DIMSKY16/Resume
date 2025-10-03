@@ -1,0 +1,281 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Musthafa Dimas Bagaskoro Pranoto - IT Portfolio</title>
+
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&display=swap" rel="stylesheet">
+  <style>
+    /* Base */
+    body {
+        font-family: 'Montserrat', sans-serif;
+        margin: 0;
+        padding: 0;
+        background-color: #E3F2FD;
+        color: #1A237E;
+        overflow-x: hidden;
+        line-height: 1.6;
+        word-wrap: break-word;
+    }
+
+    .background-wave {
+        position: fixed;
+        top: 0; left: 0;
+        width: 100%; height: 100%;
+        background-image: url('https://img.pikbest.com/wp/202347/architecture-portfolio-blue-luxury-background-with-abstract-wall-wave-3d-rendered-and-perfect-for-website-presentation-or-use_9759684.jpg!sw800');
+        background-size: cover;
+        opacity: 0.1;
+        z-index: -1;
+        animation: waveAnimation 20s infinite linear;
+    }
+
+    @keyframes waveAnimation {
+        0% { transform: translateX(0); }
+        50% { transform: translateX(-50px); }
+        100% { transform: translateX(0); }
+    }
+
+    header {
+        background-color: rgba(26, 35, 126, 0.8);
+        color: white;
+        padding: 12px;
+        text-align: center;
+        position: sticky;
+        top: 0;
+        z-index: 10;
+    }
+
+    nav {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 8px;
+    }
+
+    nav a {
+        color: white;
+        text-decoration: none;
+        font-weight: 600;
+        letter-spacing: 0.5px;
+        font-size: 0.9rem;
+        transition: color 0.3s;
+    }
+
+    nav a:hover { color: #FF5722; }
+
+    section {
+        padding: 25px 15px;
+        max-width: 1100px;
+        margin: 0 auto;
+        opacity: 0;
+        transform: translateY(40px);
+        transition: opacity 1s ease-out, transform 1s ease-out;
+    }
+
+    section.visible { opacity: 1; transform: translateY(0); }
+
+    #hero {
+        text-align: center;
+        background-color: rgba(255, 255, 255, 0.9);
+        border-radius: 20px;
+        margin: 20px auto;
+        padding: 25px;
+        box-shadow: 0 4px 20px rgba(0,0,0,0.1);
+    }
+
+    #hero img {
+        border-radius: 50%;
+        width: 150px;
+        height: 150px;
+        object-fit: cover;
+        border: 5px solid #009688;
+        animation: pulse 2s infinite;
+        max-width: 100%;
+    }
+
+    @keyframes pulse {
+        0% { transform: scale(1); }
+        50% { transform: scale(1.05); }
+        100% { transform: scale(1); }
+    }
+
+    h1 {
+        color: #009688;
+        font-size: 1.8rem;
+        margin-top: 15px;
+    }
+
+    h2 {
+        color: #009688;
+        font-size: 1.3rem;
+        margin-bottom: 12px;
+    }
+
+    p, li { font-size: 0.95rem; }
+
+    ul { list-style-type: none; padding: 0; }
+
+    li {
+        background: rgba(255, 255, 255, 0.9);
+        margin: 6px 0;
+        padding: 12px;
+        border-radius: 10px;
+        box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+        transition: transform 0.3s, box-shadow 0.3s;
+    }
+
+    li:hover { transform: translateY(-5px); box-shadow: 0 4px 15px rgba(0,0,0,0.1); }
+
+    .skills-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
+        gap: 12px;
+    }
+
+    .skill-item {
+        text-align: center;
+        background: rgba(255,255,255,0.9);
+        padding: 15px;
+        border-radius: 10px;
+    }
+
+    .skill-icon {
+        width: 45px;
+        height: 45px;
+        margin-bottom: 8px;
+        max-width: 100%;
+    }
+
+    footer {
+        background-color: #1A237E;
+        color: white;
+        text-align: center;
+        padding: 12px;
+        font-size: 0.85rem;
+    }
+
+    /* 🔹 Mobile Responsive */
+    @media (max-width: 768px) {
+        h1 { font-size: 1.5rem; }
+        h2 { font-size: 1.1rem; }
+        nav a { font-size: 0.8rem; }
+        #hero img { width: 120px; height: 120px; }
+        section { padding: 20px 12px; }
+    }
+  </style>
+</head>
+<body>
+  <div class="background-wave"></div>
+
+  <header>
+    <nav>
+      <a href="#hero">Home</a>
+      <a href="#summary">Summary</a>
+      <a href="#education">Education</a>
+      <a href="#experience">Experience</a>
+      <a href="#training">Training</a>
+      <a href="#skills">Skills</a>
+      <a href="#certificates">Certificates</a>
+    </nav>
+  </header>
+
+  <section id="hero">
+      <img src="a1.png" alt="Musthafa Dimas Bagaskoro Pranoto">
+      <h1>Musthafa Dimas Bagaskoro Pranoto</h1>
+      <p>Makmur Raya No.17, Jakarta Selatan • dimas.pranoto01@gmail.com • +62 821 1210 1929 • 
+        <a href="https://www.linkedin.com/in/musthafa-dimas-bagaskoro-pranoto-106397222/">LinkedIn</a>
+      </p>
+  </section>
+
+  <section id="summary">
+      <h2>Summary</h2>
+      <p>A Diploma (D3) graduate in Computer Technology (Computer Engineering) from Telkom University, with a focus on Network and IT Technical Support, Database Management, Quality Assurance, and Computer Vision. Experienced as an IT Infrastructure & Operational, with hands-on involvement in troubleshooting, system testing, database handling, and technical support. Highly motivated to contribute skills and knowledge in supporting IT infrastructure, enhancing network readiness, and delivering effective solutions.</p>
+  </section>
+
+  <section id="education">
+      <h2>Education</h2>
+      <ul>
+          <li>
+              <strong>TELKOM UNIVERSITY — AUGUST 2020 - SEPTEMBER 2023</strong><br>
+              Diploma of Computer Technology<br>
+              Final Project: Aerial Object Tracking System on Micro Quadrotor Drone<br>
+              GPA: 3.75
+          </li>
+      </ul>
+  </section>
+
+  <section id="experience">
+      <h2>Work Experience</h2>
+      <ul>
+          <li>
+              <strong>IT Infrastructure & Operational — AUGUST 2024 – PRESENT</strong><br>
+              • Troubleshooting – Resolved hardware & software issues on PCs, printers, and peripherals<br>
+              • Networking – Installed & maintained LAN, structured cabling, switches, and MikroTik routers<br>
+              • ERP Systems – Performed Quality Control ensuring functionality, data accuracy, and business alignment<br>
+              • EMR&SIMRS – Tested & validated hospital applications, ensuring workflow compliance and Satu Sehat integration<br>
+              • Database Administration – Managed MySQL (GLPI) & PostgreSQL (ERP), backups, and access control<br>
+              • IT Asset Management – Oversaw assets & helpdesk via GLPI with proper documentation and tracking<br>
+              • IT Helpdesk Support – Delivered Level 1 & 2 support across multi-site infrastructures<br>
+              • CCTV Systems – Installed & maintained DVR (analog) & NVR (IP-based) solutions<br>
+              • Cloud Computing – Managed deployments, monitored processes, and maintained system reliability<br>
+              • Collaboration – Coordinated with developers/stakeholders, reported bugs, and tracked resolution progress<br>
+              • Data Analyst – Extracted insights from databases to support operational decisions<br>
+              • IT Ticketing – Managed support tickets with GLPI, ensuring categorization, escalation, and SLA compliance<br>
+          </li>
+      </ul>
+  </section>
+
+  <section id="training">
+      <h2>Training</h2>
+      <ul>
+          <li><strong>VSGA JUNIOR CYBER SECURITY (BNSP Certified)</strong></li>
+          <li><strong>VSGA JUNIOR NETWORK ADMINISTRATOR (BNSP Certified)</strong></li>
+          <li><strong>FGA CCNA NETWORK ENGINEER</strong></li>
+          <li><strong>IT SUPPORT GOOGLE</strong></li>
+      </ul>
+  </section>
+
+  <section id="skills">
+      <h2>Skills</h2>
+      <div class="skills-grid">
+          <div class="skill-item"><img class="skill-icon" src="glpi.jpeg"><br>IT Ticketing & Asset Management</div>
+          <div class="skill-item"><img class="skill-icon" src="database.jpg"><br>Database Admin (MySQL & PostgreSQL)</div>
+          <div class="skill-item"><img class="skill-icon" src="network.png"><br>Network Engineer (Cisco & Mikrotik)</div>
+          <div class="skill-item"><img class="skill-icon" src="qc.jpg"><br>Quality Control (ERP & SIMRS)</div>
+          <div class="skill-item"><img class="skill-icon" src="cctv.jpg"><br>CCTV (DVR & NVR)</div>
+          <div class="skill-item"><img class="skill-icon" src="helpdesk.jpg"><br>IT Helpdesk Support</div>
+      </div>
+  </section>
+
+  <section id="certificates">
+      <h2>Certificates</h2>
+      <ul>
+          <li>BNSP - JUNIOR CYBER SECURITY</li>
+          <li>BNSP - JUNIOR NETWORK ADMINISTRATOR</li>
+          <li>Digital Talent Scholarship - FGA CCNA NETWORK ENGINEER</li>
+          <li>MSIB Cloud Computing (Cyber Security)</li>
+          <li>IT Support Google</li>
+      </ul>
+  </section>
+
+  <footer>
+      <p>&copy; 2025 Musthafa Dimas Bagaskoro Pranoto. All rights reserved.</p>
+  </footer>
+
+  <script>
+    // Scroll animation
+    const sections = document.querySelectorAll('section');
+    const observer = new IntersectionObserver(entries => {
+        entries.forEach(entry => {
+            if (entry.isIntersecting) {
+                entry.target.classList.add('visible');
+            }
+        });
+    }, { threshold: 0.1 });
+
+    sections.forEach(section => observer.observe(section));
+  </script>
+</body>
+</html>
